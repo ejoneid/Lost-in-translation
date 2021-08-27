@@ -11,12 +11,14 @@ function App() {
       <header>
         <h1>Lost in translation</h1>
       </header>
-      <Switch>
-        <Route path="/" exact component={StartupScreen} />
-        <Route path="/translation" component={TranslationScreen} />
-        <Route path="/profile" component={ProfileScreen} />
-        <Route path="*" component={NotFound} />
-      </Switch>
+      <main className="container">
+        <Switch>
+          <Route path="/" exact component={StartupScreen} />
+          <Route path="/translation" component={TranslationScreen} />
+          <Route path="/profile" component={ProfileScreen} />
+          <Route path="*" component={NotFound} />
+        </Switch>
+      </main>
     </BrowserRouter>
   );
 }

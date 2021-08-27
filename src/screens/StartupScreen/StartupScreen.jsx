@@ -2,18 +2,30 @@ import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 import './StartupScreen.css'
+import { useState } from "react";
+import { login } from "../../API/user";
+import { submitOnEnter } from "../../utils/submitOnEnter";
 
-function StartupScreen() {
+function StartupScreen(props) {
+  const [name, setName] = useState("")
+
+  const submit = async () => {
+    const log = await login(name);
+    props.history.push("/translation")
+  }
+
   return (
     <main>
       <InputGroup className="mb-3">
-        <InputGroup.Text id="inputGroup-sizing-default">Name</InputGroup.Text>
         <FormControl
           aria-label="Default"
+          placeholder="Enter your name"
           aria-describedby="inputGroup-sizing-default"
+          onChange={(e) => setName(e.target.value)}
+          onKeyPress={e => submitOnEnter(e.key, submit)}
         />
-        <Button variant="outline-secondary" id="button-addon2">
-          commit
+        <Button onClick={submit} variant="outline-primary" id="button-addon2">
+          Next
         </Button>
       </InputGroup>
     </main>
