@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
+import PageHeader from "./components/PageHeader/PageHeader";
 import NotFound from "./screens/NotFound/NotFound";
 import ProfileScreen from "./screens/ProfileScreen/ProfileScreen";
 import StartupScreen from "./screens/StartupScreen/StartupScreen";
@@ -8,9 +9,7 @@ import TranslationScreen from "./screens/TranslationScreen/TranslationScreen";
 function App() {
   return (
     <BrowserRouter>
-      <header>
-        <h1>Lost in translation</h1>
-      </header>
+      <PageHeader />
       <main className="container">
         <Switch>
           <Route path="/" exact component={StartupScreen} />

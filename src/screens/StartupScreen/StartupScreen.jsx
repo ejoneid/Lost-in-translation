@@ -10,7 +10,7 @@ function StartupScreen(props) {
   const [name, setName] = useState("")
 
   const submit = async () => {
-    const log = await login(name);
+    await login(name);
     props.history.push("/translation")
   }
 
