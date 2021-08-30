@@ -1,12 +1,10 @@
-
-
 header {
-    background-color: #FFC75F;
+    background-color: #ffc75f;
     min-height: 80px;
     color: white;
-    border-bottom: 2px solid lightgray;
+    border-bottom: 2px solid grey;
 }
 
 h1 {
-    
+    padding-top: 10px;
 }

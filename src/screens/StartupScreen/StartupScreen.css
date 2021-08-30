@@ -1,0 +1,8 @@
+.main {
+    height: 100vh;
+    background: linear-gradient(#ffc75f 40%, #fff 40%);
+}
+
+button {
+    min-width: 4rem;
+}

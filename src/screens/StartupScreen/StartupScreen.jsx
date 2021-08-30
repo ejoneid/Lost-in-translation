@@ -1,35 +1,32 @@
-import InputGroup from "react-bootstrap/InputGroup";
-import FormControl from "react-bootstrap/FormControl";
-import Button from "react-bootstrap/Button";
-import './StartupScreen.css'
+import Alert from "react-bootstrap/Alert";
 import { useState } from "react";
 import { login } from "../../API/user";
-import { submitOnEnter } from "../../utils/submitOnEnter";
+import NameInput from "./../../components/NameInput/NameInput";
 
-function StartupScreen(props) {
-  const [name, setName] = useState("")
+import "./StartupScreen.css";
 
-  const submit = async () => {
-    await login(name);
-    props.history.push("/translation")
-  }
+const StartupScreen = (props) => {
+    const [name, setName] = useState("");
+    const [error, setError] = useState("");
 
-  return (
-    <main>
-      <InputGroup className="mb-3">
-        <FormControl
-          aria-label="Default"
-          placeholder="Enter your name"
-          aria-describedby="inputGroup-sizing-default"
-          onChange={(e) => setName(e.target.value)}
-          onKeyPress={e => submitOnEnter(e.key, submit)}
-        />
-        <Button onClick={submit} variant="outline-primary" id="button-addon2">
-          Next
-        </Button>
-      </InputGroup>
-    </main>
-  );
-}
+    const submitName = async () => {
+        try {
+            await login(name);
+            props.history.push("/translation");
+            return "success";
+        } catch (err) {
+            setError(err.message);
+        }
+    };
+
+    return (
+        <div className="main">
+            <main className="container pt-5">
+                <NameInput submit={submitName} setName={setName} />
+                {error ? <Alert variant="danger">{error}</Alert> : null}
+            </main>
+        </div>
+    );
+};
 
 export default StartupScreen;

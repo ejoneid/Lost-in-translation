@@ -7,19 +7,17 @@ import StartupScreen from "./screens/StartupScreen/StartupScreen";
 import TranslationScreen from "./screens/TranslationScreen/TranslationScreen";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <PageHeader />
-      <main className="container">
-        <Switch>
-          <Route path="/" exact component={StartupScreen} />
-          <Route path="/translation" component={TranslationScreen} />
-          <Route path="/profile" component={ProfileScreen} />
-          <Route path="*" component={NotFound} />
-        </Switch>
-      </main>
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter>
+            <PageHeader />
+            <Switch>
+                <Route path="/" exact component={StartupScreen} />
+                <Route path="/translation" component={TranslationScreen} />
+                <Route path="/profile" component={ProfileScreen} />
+                <Route path="*" component={NotFound} />
+            </Switch>
+        </BrowserRouter>
+    );
 }
 
 export default App;
