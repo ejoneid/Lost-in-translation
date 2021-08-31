@@ -1,8 +1,12 @@
 .main {
-    height: 100vh;
-    background: linear-gradient(#ffc75f 40%, #fff 40%);
+    min-height: 50rem;
+    background: linear-gradient(#ffc75f 25rem, #fff 25rem);
 }
 
 button {
     min-width: 4rem;
+}
+
+.center {
+    padding-top: 20rem;
 }

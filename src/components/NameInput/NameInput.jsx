@@ -5,6 +5,8 @@ import Spinner from "react-bootstrap/Spinner";
 import { submitOnEnter } from "../../utils/submitOnEnter";
 import { useState } from "react";
 
+import "./NameInput.css";
+
 const NameInput = (props) => {
     const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -17,8 +19,8 @@ const NameInput = (props) => {
     };
 
     return (
-        <div>
-            <InputGroup className="mb-3">
+        <div id="containerDiv">
+            <InputGroup>
                 <FormControl
                     variant="secondary"
                     aria-label="Default"
@@ -28,7 +30,7 @@ const NameInput = (props) => {
                     onKeyPress={(e) => submitOnEnter(e.key, submit)}
                     size="lg"
                 />
-                <Button onClick={submit} variant="outline-secondary" id="button-addon2">
+                <Button onClick={submit} variant="outline-primary" id="button-addon2">
                     {isSubmitting ? (
                         <Spinner
                             as="span"

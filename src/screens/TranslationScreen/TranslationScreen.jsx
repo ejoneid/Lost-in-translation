@@ -5,31 +5,38 @@ import TranslationBox from "../../components/TranslationBox/TranslationBox";
 import { useState } from "react";
 import { submitOnEnter } from "../../utils/submitOnEnter";
 
+import "./TranslationScreen.css";
+
 function TranslationScreen() {
-  const [toTranslate, setToTranslate] = useState("");
-  const [inputValue, setInputValue] = useState("");
+    const [toTranslate, setToTranslate] = useState("");
+    const [inputValue, setInputValue] = useState("");
 
-  const handleTranslateClick = () => {
-      setToTranslate(inputValue)
-  }
+    const handleTranslateClick = () => {
+        setToTranslate(inputValue);
+    };
 
-  return (
-    <div>
-      <InputGroup className="mb-3">
-        <FormControl
-          aria-label="Default"
-          aria-describedby="inputGroup-sizing-default"
-          onChange={e => setInputValue(e.target.value)}
-          onKeyPress={e => submitOnEnter(e.key, handleTranslateClick)}
-        />
-        <Button onClick={handleTranslateClick} variant="outline-primary" id="button-addon2">
-          translate
-        </Button>
-      </InputGroup>
+    return (
+        <main>
+            <div id="inputArea">
+                <div className="container">
+                    <InputGroup className="pt-5">
+                        <FormControl
+                            aria-label="Default"
+                            aria-describedby="inputGroup-sizing-default"
+                            onChange={(e) => setInputValue(e.target.value)}
+                            onKeyPress={(e) => submitOnEnter(e.key, handleTranslateClick)}
+                            size="lg"
+                        />
+                        <Button onClick={handleTranslateClick} variant="primary" id="button-addon2">
+                            translate
+                        </Button>
+                    </InputGroup>
+                </div>
+            </div>
 
-      <TranslationBox toTranslate={toTranslate} />
-    </div>
-  );
+            <TranslationBox toTranslate={toTranslate} />
+        </main>
+    );
 }
 
 export default TranslationScreen;
