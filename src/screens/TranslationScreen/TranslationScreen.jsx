@@ -7,36 +7,42 @@ import { submitOnEnter } from "../../utils/submitOnEnter";
 
 import "./TranslationScreen.css";
 
-function TranslationScreen() {
-    const [toTranslate, setToTranslate] = useState("");
-    const [inputValue, setInputValue] = useState("");
+const TranslationScreen = () => {
+  const [toTranslate, setToTranslate] = useState("");
+  const [inputValue, setInputValue] = useState("");
 
-    const handleTranslateClick = () => {
-        setToTranslate(inputValue);
-    };
+  const handleTranslateClick = () => {
+    setToTranslate(inputValue);
+  };
 
-    return (
-        <main>
-            <div id="inputArea">
-                <div className="container">
-                    <InputGroup className="pt-5">
-                        <FormControl
-                            aria-label="Default"
-                            aria-describedby="inputGroup-sizing-default"
-                            onChange={(e) => setInputValue(e.target.value)}
-                            onKeyPress={(e) => submitOnEnter(e.key, handleTranslateClick)}
-                            size="lg"
-                        />
-                        <Button onClick={handleTranslateClick} variant="primary" id="button-addon2">
-                            translate
-                        </Button>
-                    </InputGroup>
-                </div>
-            </div>
+  return (
+    <main>
+      <div id="inputArea">
+        <div className="container">
+          <InputGroup className="pt-5">
+            <FormControl
+              aria-label="Default"
+              aria-describedby="inputGroup-sizing-default"
+              onChange={(e) => setInputValue(e.target.value)}
+              onKeyPress={(e) => submitOnEnter(e.key, handleTranslateClick)}
+              size="lg"
+            />
+            <Button
+              onClick={handleTranslateClick}
+              variant="primary"
+              id="button-addon2"
+            >
+              translate
+            </Button>
+          </InputGroup>
+        </div>
+      </div>
 
-            <TranslationBox toTranslate={toTranslate} />
-        </main>
-    );
+      <div className="container mt-5 mb-5">
+        <TranslationBox toTranslate={toTranslate} />
+      </div>
+    </main>
+  );
 }
 
 export default TranslationScreen;

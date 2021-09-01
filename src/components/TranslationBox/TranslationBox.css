@@ -1,0 +1,7 @@
+#translationDiv {
+    padding: 2rem;
+    background: linear-gradient(#fff 90%, #845ec2 90%);
+    border-radius: 10px;
+    box-shadow: 2px 3px 3px 3px grey;box-shadow: 2px ;
+    min-height: 25rem;
+}
