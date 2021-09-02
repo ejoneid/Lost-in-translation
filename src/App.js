@@ -17,8 +17,6 @@ function App() {
             return;
         }
         setName(storedName);
-
-        console.log("hei");
     }, []);
 
     return (
