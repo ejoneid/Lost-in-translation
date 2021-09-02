@@ -29,7 +29,6 @@ const TranslationScreen = (props) => {
         }
         setToTranslate(inputValue);
         const response = await addTranslation(name, inputValue);
-        console.log(response);
         setInvalidInput(false);
     };
 
