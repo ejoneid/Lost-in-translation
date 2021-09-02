@@ -2,54 +2,15 @@
   "users": [
     {
       "name": "Tester Testington",
-      "translations": [
-        "t",
-        "te",
-        "tes",
-        "test",
-        "hei"
+      "posts": [
+        "hello",
+        "world",
+        "I",
+        "am",
+        "tester",
+        "testington"
       ],
       "id": 1
-    },
-    {
-      "name": "hei",
-      "posts": [],
-      "id": 2
-    },
-    {
-      "name": "fsd",
-      "posts": [],
-      "id": 3
-    },
-    {
-      "name": "fds",
-      "posts": [],
-      "id": 4
-    },
-    {
-      "name": "",
-      "posts": [],
-      "id": 5
-    },
-    {
-      "name": "fdsa",
-      "posts": [],
-      "id": 6
-    },
-    {
-      "name": "fsda",
-      "posts": [],
-      "id": 7
-    },
-    {
-      "name": "lkjsd",
-      "posts": [],
-      "id": 8
-    },
-    {
-      "name": "tester testington",
-      "posts": [],
-      "id": 9
     }
   ]
 }

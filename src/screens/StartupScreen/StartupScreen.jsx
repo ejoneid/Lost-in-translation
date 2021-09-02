@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import "./StartupScreen.css";
 
 const StartupScreen = (props) => {
-    const [name, setName] = useState("");
+    const { name, setName } = props;
     const [error, setError] = useState("");
 
     useEffect(() => {

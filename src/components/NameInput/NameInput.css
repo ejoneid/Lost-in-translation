@@ -1,6 +1,6 @@
 #containerDiv {
     padding: 50px;
-    background: linear-gradient(#fff 90%, #845ec2 90%);
+    background: linear-gradient(to top, #845ec2 1rem, #fff 1rem);
     border-radius: 10px;
     box-shadow: 2px 3px 3px 3px grey;
 }

@@ -2,3 +2,8 @@
     background-color: #ffc75f;
     height: 9rem;
 }
+
+#errorP {
+    color: #ff1616;
+    margin-top: 2px;
+}

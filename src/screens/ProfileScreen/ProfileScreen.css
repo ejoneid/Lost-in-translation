@@ -1,17 +1,21 @@
-#translationDiv {
+.translationPost {
     padding: 2rem;
+    margin-top: 1rem;
     background: linear-gradient(to top, #845ec2 1rem, #fff 1rem);
     border-radius: 10px;
     box-shadow: 2px 3px 3px 3px grey;
-    box-shadow: 2px;
-    min-height: 25rem;
 }
 
-.wordDiv {
-    margin-right: 6rem;
+.deleteBtn {
     display: inline-block;
 }
 
-img {
-    height: 8rem;
+.postP {
+    display: inline-block;
+    margin-left: 1rem;
+    font-size: larger;
+}
+
+#logoutBtn {
+    margin-left: 0.5rem;
 }
